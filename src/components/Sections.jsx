@@ -130,13 +130,13 @@ export function HeroSection() {
 
       <div className="hero-visual" aria-hidden="true">
         <div className="visual-card visual-primary" ref={primaryCardRef}>
-          <img src="/public/gallery/IMG_1964.JPG" alt="" className="visual-photo" />
+          <img src="/gallery/IMG_1964.JPG" alt="" className="visual-photo" />
           <span className="visual-label">Featured Presentation</span>
           <strong>Open-door Rolls-Royce finish</strong>
           <small>Luxury presentation shot showing interior care and final finish together.</small>
         </div>
         <div className="visual-card visual-secondary" ref={secondaryCardRef}>
-          <img src="/public/gallery/IMG_1960.JPG" alt="" className="visual-photo" />
+          <img src="/gallery/IMG_1960.JPG" alt="" className="visual-photo" />
           <span className="visual-label">Finished Result</span>
           <strong>Front three-quarter gloss</strong>
           <small>A cleaner hero-side image that makes the final finish feel credible.</small>
