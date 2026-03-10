@@ -75,19 +75,19 @@ export const servicesData = [
   {
     slug: 'ceramic-coating-paint-protection',
     title: 'Ceramic coating/paint protection',
-    shortPrice: '£195 to £600+',
+    shortPrice: '£1000+',
     summary: 'Ceramic protection sits higher because the prep matters, the finish matters, and the coating is intended to last for years.',
-    note: 'Typical ceramic coating range for long-term paint protection, usually around 2 to 5 years depending on product and prep.',
+    note: 'Ceramic coating with long-term paint protection.',
     overview:
       'Ceramic coating is one of the clearest examples of detail-level work. The coating itself matters, but the preparation beforehand matters just as much if the result is going to last and look right.',
     includes: ['Paint preparation', 'Long-term ceramic protection', '2 to 5 year protection options', 'Protection-focused finishing'],
   },
   {
     slug: 'engine-bay-detailing',
-    title: 'Engine bay detailing',
-    shortPrice: '£30 to £100',
+    title: 'Engine bay steam cleaning',
+    shortPrice: '£150+',
     summary: 'Engine bay work is often an add-on, but careful cleaning and dressing still carries clear standalone value.',
-    note: 'Typical range for engine bay detailing depending on condition and finish level.',
+    note: 'Engine bay steam cleaning and presentation work.',
     overview:
       'Engine bay detailing is about controlled, careful cleaning rather than making a mess under the bonnet. It lifts presentation and shows the same attention to the parts most people ignore.',
     includes: ['Careful steam cleaning', 'Safe surface wipe-down', 'Dressing and presentation', 'Condition-based finishing'],
@@ -114,7 +114,7 @@ export const vehicleSizes = [
 ]
 
 export const addOns = [
-  { title: 'Convertible roof protection', price: '£70 to £195' },
-  { title: 'Headlight restoration', price: 'Around £35 per light' },
-  { title: 'Wheel ceramic coating', price: 'Around £50' },
+  { title: 'Wheel rims ceramic coated', price: '£150+' },
+  { title: 'Interior leather cleaned and conditioned', price: '£200+' },
+  { title: 'Tyres dressed', price: '£100+' },
 ]

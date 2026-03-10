@@ -482,8 +482,8 @@ export function PricingSection() {
         transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
       >
         <span className="friends-family-heart" aria-hidden="true">♥</span>
-        <p className="pricing-service">Friends &amp; Family Price</p>
-        <h3>£</h3>
+        <p className="pricing-service">Special Rates For True Friends ~~~</p>
+        <h3>Free <span className="friends-family-inline-heart" aria-hidden="true">♥</span></h3>
       </Motion.div>
     </Motion.section>
   )
