@@ -195,9 +195,10 @@ export function AboutSection() {
       <div className="story-layout">
         <article className="story-panel story-panel-dark">
           <p>
-            Ajit mainly details cars for friends and family. He does not do it for profit.
-            He does it because he values the work, enjoys the process, and takes real pride
-            in seeing a car look cared for again.
+            Ajit mainly details cars for friends and family. The point is not to turn it
+            into a money-led business. It is about the enjoyment of the work, the pride in
+            doing it properly, and giving people that real wow factor when they see their
+            car looking its best again.
           </p>
           <p>
             The tone of this site reflects that approach: warm, honest, and focused on the
@@ -323,9 +324,9 @@ export function PricingSection() {
     >
       <div className="section-heading">
         <p className="eyebrow">Without the Love, Prices</p>
-        <h2>Comparable detailing usually costs far more than a basic valet once the work is done properly.</h2>
+        <h2>A guide to the sort of time, care, and finish involved when the work is done properly.</h2>
         <p>
-          These ranges reflect the pricing you want the site to communicate, including ceramic
+          These ranges give context around the level of detailing involved, including ceramic
           coating and protection work. Open any item for its own page.
         </p>
       </div>
@@ -462,6 +463,7 @@ export function ContactSection() {
         name="contact"
         method="POST"
         action="/"
+        netlify
         data-netlify="true"
         netlify-honeypot="bot-field"
         whileHover={shouldReduceMotion ? undefined : { y: -4 }}

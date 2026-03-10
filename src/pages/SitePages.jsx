@@ -28,7 +28,7 @@ export function AboutPage() {
       <IntroBlock
         eyebrow="About"
         title="A proper introduction to Ajit and why he does this work."
-        text="This page keeps the focus on the person behind the detailing: retired, patient, trusted, and led by pride rather than selling."
+        text="This page keeps the focus on the person behind the detailing: patient, trusted, and more interested in giving people that wow factor than turning the work into a sales pitch."
       />
       <HighlightsSection />
       <AboutSection />
@@ -69,8 +69,8 @@ export function PricesPage() {
     <PageTransition>
       <IntroBlock
         eyebrow="Prices"
-        title="What this level of care usually costs in the market."
-        text="Ajit may do this from passion, but the work still carries real value. These pages show typical pricing for comparable detailing and ceramic coating work."
+        title="A rough guide to the kind of time and care this work usually involves."
+        text="This page gives context around typical detailing ranges without changing the tone of the site into something money-led or sales-driven."
       />
       <PricingSection />
     </PageTransition>
