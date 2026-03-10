@@ -33,7 +33,7 @@ function SiteChrome({ children }) {
         <nav className="nav">
           <Link to="/about">About</Link>
           <Link to="/gallery">Gallery</Link>
-          <Link to="/what-he-does">What He Does</Link>
+          <Link to="/what-he-does">Offerings</Link>
           <Link to="/prices">Prices</Link>
           <Link to="/testimonials">Testimonials</Link>
           <Link to="/contact" className="nav-cta">

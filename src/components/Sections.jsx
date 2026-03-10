@@ -24,6 +24,77 @@ const fadeUp = {
   },
 }
 
+function PricingGraphic({ slug }) {
+  const variants = {
+    'maintenance-wash-detail': {
+      label: 'Wash',
+      path: 'M18 72 C42 48, 80 38, 118 36 C150 34, 182 42, 210 58',
+      circleX: 188,
+      circleY: 36,
+    },
+    'interior-deep-clean': {
+      label: 'Interior',
+      path: 'M18 66 C52 54, 88 46, 124 44 C154 42, 186 48, 214 62',
+      circleX: 84,
+      circleY: 34,
+    },
+    'full-exterior-detail': {
+      label: 'Exterior',
+      path: 'M18 74 C56 50, 94 40, 134 38 C170 36, 196 44, 214 54',
+      circleX: 162,
+      circleY: 32,
+    },
+    'machine-polishing-enhancement': {
+      label: 'Polish',
+      path: 'M18 70 C44 44, 82 30, 126 30 C166 30, 196 42, 214 60',
+      circleX: 122,
+      circleY: 28,
+    },
+    'ceramic-coating-paint-protection': {
+      label: 'Ceramic',
+      path: 'M18 76 C54 48, 94 34, 142 34 C176 34, 198 42, 214 54',
+      circleX: 198,
+      circleY: 30,
+    },
+    'engine-bay-detailing': {
+      label: 'Engine',
+      path: 'M18 68 C46 52, 84 44, 124 42 C160 40, 192 46, 214 58',
+      circleX: 70,
+      circleY: 30,
+    },
+  }
+
+  const variant = variants[slug] ?? variants['maintenance-wash-detail']
+
+  return (
+    <svg className="pricing-card-graphic" viewBox="0 0 232 96" preserveAspectRatio="none">
+      <defs>
+        <linearGradient id={`line-${slug}`} x1="0%" x2="100%" y1="0%" y2="0%">
+          <stop offset="0%" stopColor="rgba(255,244,232,0.12)" />
+          <stop offset="100%" stopColor="rgba(255,244,232,0.92)" />
+        </linearGradient>
+      </defs>
+      <path
+        d={variant.path}
+        fill="none"
+        stroke={`url(#line-${slug})`}
+        strokeWidth="6"
+        strokeLinecap="round"
+      />
+      <path
+        d={variant.path}
+        fill="none"
+        stroke="rgba(255,255,255,0.16)"
+        strokeWidth="14"
+        strokeLinecap="round"
+      />
+      <circle cx={variant.circleX} cy={variant.circleY} r="20" fill="rgba(255,255,255,0.12)" />
+      <circle cx={variant.circleX} cy={variant.circleY} r="8" fill="rgba(255,244,232,0.86)" />
+      <text x="18" y="24" className="pricing-card-graphic-label">{variant.label}</text>
+    </svg>
+  )
+}
+
 export function PageTransition({ children, className = '' }) {
   return (
     <Motion.main
@@ -113,9 +184,8 @@ export function HeroSection() {
         <p className="eyebrow">AMP Detailing</p>
         <h1>Car detailing done with pride, patience, and real care.</h1>
         <p className="hero-text">
-          Ajit is retired and details cars because he loves bringing them back to life.
-          This website gives his work a proper home and shows the effort, respect, and
-          attention he puts into every vehicle.
+          Ajit details cars because he loves bringing them back to life. AMP Detailing
+          reflects the effort, respect, and attention he puts into every vehicle.
         </p>
 
         <div className="hero-actions">
@@ -130,16 +200,16 @@ export function HeroSection() {
 
       <div className="hero-visual" aria-hidden="true">
         <div className="visual-card visual-primary" ref={primaryCardRef}>
-          <img src="/gallery/IMG_1964.JPG" alt="" className="visual-photo" />
+          <img src="/public/gallery/IMG_1964.JPG" alt="" className="visual-photo" />
           <span className="visual-label">Featured Presentation</span>
           <strong>Open-door Rolls-Royce finish</strong>
-          <small>Luxury presentation shot showing interior care and final finish together.</small>
+          <small>Interior care and exterior finish in one view.</small>
         </div>
         <div className="visual-card visual-secondary" ref={secondaryCardRef}>
-          <img src="/gallery/IMG_1960.JPG" alt="" className="visual-photo" />
+          <img src="/public/gallery/IMG_1960.JPG" alt="" className="visual-photo" />
           <span className="visual-label">Finished Result</span>
           <strong>Front three-quarter gloss</strong>
-          <small>A cleaner hero-side image that makes the final finish feel credible.</small>
+          <small>A clear view of the final finish.</small>
         </div>
         <div className="visual-detail">
           <span>Interior trim</span>
@@ -188,17 +258,17 @@ export function AboutSection() {
       viewport={{ once: true, amount: 0.2 }}
     >
       <div className="section-heading">
-        <p className="eyebrow">About Ajit</p>
+        <p className="eyebrow">About AMP Detailing</p>
         <h2>A personal service built on enjoyment, trust, and doing the job properly.</h2>
       </div>
 
       <div className="story-layout">
         <article className="story-panel story-panel-dark">
           <p>
-            Ajit mainly details cars for friends and family. The point is not to turn it
-            into a money-led business. It is about the enjoyment of the work, the pride in
-            doing it properly, and giving people that real wow factor when they see their
-            car looking its best again.
+            AMP Detailing is built around friends, family, and the enjoyment of doing the
+            job properly. It is about taking pride in the work, paying attention to the
+            details others miss, and giving every car that real wow factor when people see
+            it again.
           </p>
           <p>
             The tone of this site reflects that approach: warm, honest, and focused on the
@@ -232,12 +302,8 @@ export function GallerySection() {
       viewport={{ once: true, amount: 0.15 }}
     >
       <div className="section-heading">
-        <p className="eyebrow">Featured Work</p>
-        <h2>The gallery should carry the site, so the layout is built around strong visuals.</h2>
-        <p>
-          These Rolls-Royce images now anchor the featured work, with space to add more
-          before-and-after case studies as Ajit builds out the portfolio.
-        </p>
+        <p className="eyebrow">Gallery</p>
+        <h2>A closer look at the finish, the presentation, and the care behind the work.</h2>
       </div>
 
       <div className="gallery-grid">
@@ -276,23 +342,30 @@ export function ServicesSection() {
       viewport={{ once: true, amount: 0.2 }}
     >
       <div className="section-heading">
-        <p className="eyebrow">What He Does</p>
-        <h2>Not a hard-sell service menu. Just a clear view of what goes into each detail.</h2>
+        <p className="eyebrow">Offerings</p>
+        <h2>Care that looks sharp, feels premium, and leaves the right impression.</h2>
+        <p>
+          From careful washing to deep interior work and finishing touches, AMP Detailing
+          is about making the whole car feel properly looked after.
+        </p>
       </div>
 
       <div className="services-layout">
-        <article className="services-card">
-          <h3>What Ajit works on</h3>
-          <div className="chip-grid">
-            {servicesData.map((service) => (
-              <Link className="service-chip service-link" key={service.slug} to={`/services/${service.slug}`}>
-                {service.title}
-              </Link>
-            ))}
+        <article className="services-card services-showcase">
+          <div className="services-showcase-media">
+            <img src="/public/gallery/IMG_1965.JPG" alt="Rolls-Royce side profile after detailing" className="gallery-photo" />
+          </div>
+          <div className="services-showcase-copy">
+            <p className="pricing-service">AMP Approach</p>
+            <h3>Exterior finish, interior freshness, and the small details people notice straight away.</h3>
+            <p>
+              The work is built around presentation as much as cleanliness, so the result
+              feels polished, cared for, and genuinely special.
+            </p>
           </div>
         </article>
 
-        <article className="process-card">
+        <article className="process-card process-card-spotlight">
           <h3>The process</h3>
           <div className="process-list">
             {processSteps.map((item) => (
@@ -306,6 +379,24 @@ export function ServicesSection() {
             ))}
           </div>
         </article>
+      </div>
+
+      <div className="service-chip-grid">
+        {servicesData.map((service, index) => (
+          <Motion.div
+            key={service.slug}
+            initial={{ opacity: 0, y: 18 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.45, delay: index * 0.04 }}
+          >
+            <Link className="service-chip-card" to={`/services/${service.slug}`}>
+              <p className="pricing-service">Service</p>
+              <h3>{service.title}</h3>
+              <p>{service.shortPrice}</p>
+            </Link>
+          </Motion.div>
+        ))}
       </div>
     </Motion.section>
   )
@@ -323,25 +414,28 @@ export function PricingSection() {
       viewport={{ once: true, amount: 0.15 }}
     >
       <div className="section-heading">
-        <p className="eyebrow">Without the Love, Prices</p>
-        <h2>A guide to the sort of time, care, and finish involved when the work is done properly.</h2>
-        <p>
-          These ranges give context around the level of detailing involved, including ceramic
-          coating and protection work. Open any item for its own page.
-        </p>
+        <p className="eyebrow">Guide Prices</p>
+        <h2>Simple ranges that match the level of care, finish, and time involved.</h2>
       </div>
 
-      <div className="pricing-grid">
-        {servicesData.map((item) => (
+      <div className="pricing-grid pricing-grid-premium">
+        {servicesData.map((item, index) => (
           <Motion.div
             key={item.slug}
-            whileHover={shouldReduceMotion ? undefined : { y: -5 }}
+            whileHover={shouldReduceMotion ? undefined : { y: -6 }}
             transition={{ duration: 0.2 }}
           >
-            <Link className="pricing-card pricing-link" to={`/services/${item.slug}`}>
+            <Link
+              className={`pricing-card pricing-card-premium pricing-card-${(index % 4) + 1} pricing-link`}
+              to={`/services/${item.slug}`}
+            >
+              <div className="pricing-card-media" aria-hidden="true">
+                <PricingGraphic slug={item.slug} />
+                <span className="pricing-card-badge">{String(index + 1).padStart(2, '0')}</span>
+              </div>
               <p className="pricing-service">{item.title}</p>
               <h3>{item.shortPrice}</h3>
-              <p>{item.summary}</p>
+              <p>{item.note}</p>
             </Link>
           </Motion.div>
         ))}
@@ -354,8 +448,8 @@ export function PricingSection() {
         viewport={{ once: true, amount: 0.2 }}
         transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
       >
-        <article className="services-card">
-          <h3>Approximate pricing by vehicle size</h3>
+        <article className="services-card pricing-note-card">
+          <h3>By vehicle size</h3>
           <div className="size-grid">
             {vehicleSizes.map((item) => (
               <div className="size-card" key={item.label}>
@@ -367,8 +461,8 @@ export function PricingSection() {
           </div>
         </article>
 
-        <article className="services-card">
-          <h3>Optional add-ons</h3>
+        <article className="services-card pricing-note-card">
+          <h3>Add-ons</h3>
           <div className="add-on-list">
             {addOns.map((item) => (
               <div className="add-on-row" key={item.title}>
@@ -378,6 +472,18 @@ export function PricingSection() {
             ))}
           </div>
         </article>
+      </Motion.div>
+
+      <Motion.div
+        className="friends-family-price"
+        initial={{ opacity: 0, y: 24 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
+      >
+        <span className="friends-family-heart" aria-hidden="true">♥</span>
+        <p className="pricing-service">Friends &amp; Family Price</p>
+        <h3>£</h3>
       </Motion.div>
     </Motion.section>
   )
@@ -393,8 +499,8 @@ export function QuoteSection() {
       viewport={{ once: true, amount: 0.3 }}
     >
       <p>
-        Ajit details cars because he loves the work, not because he has to. The site should
-        leave people with that feeling immediately.
+        AMP Detailing should feel personal, warm, and trustworthy from the first glance,
+        because that is exactly what the work represents.
       </p>
     </Motion.section>
   )
@@ -411,20 +517,36 @@ export function TestimonialsSection() {
     >
       <div className="section-heading">
         <p className="eyebrow">Kind Words</p>
-        <h2>Short comments help underline the trust and care behind the work.</h2>
+        <h2>Comments that make the finish feel believable.</h2>
       </div>
 
-      <div className="testimonial-grid">
-        {testimonials.map((quote, index) => (
+      <div className="testimonial-grid testimonial-grid-premium">
+        <Motion.blockquote
+          className="testimonial-card testimonial-card-feature"
+          initial={{ opacity: 0, y: 18 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.45 }}
+        >
+          <img src="/public/gallery/IMG_1964.JPG" alt="" className="testimonial-photo" />
+          <div className="testimonial-overlay" />
+          <div className="testimonial-content">
+            <p className="pricing-service">Featured Feedback</p>
+            <p>&ldquo;{testimonials[0]}&rdquo;</p>
+          </div>
+        </Motion.blockquote>
+
+        {testimonials.slice(1).map((quote, index) => (
           <Motion.blockquote
-            className="testimonial-card"
+            className="testimonial-card testimonial-card-quote"
             key={quote}
             initial={{ opacity: 0, y: 18 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.2 }}
-            transition={{ duration: 0.45, delay: index * 0.08 }}
+            transition={{ duration: 0.45, delay: (index + 1) * 0.08 }}
           >
-            <p>&ldquo;{quote}&rdquo;</p>
+            <span className="testimonial-mark" aria-hidden="true">“</span>
+            <p>{quote}</p>
           </Motion.blockquote>
         ))}
       </div>

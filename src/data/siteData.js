@@ -1,5 +1,5 @@
 export const highlights = [
-  { value: 'Retired & Passion-Led', label: 'Built around care, not commercial pressure' },
+  { value: 'Passion-Led', label: 'Built around care, pride, and attention to detail' },
   { value: 'Friends & Family Trusted', label: 'A calm, respectful service people already know' },
   { value: 'Before & After Focused', label: 'Results that show the time spent on every surface' },
 ]
@@ -9,25 +9,25 @@ export const galleryItems = [
     title: 'Rolls-Royce finish',
     tag: 'Signature Results',
     note: 'A clean side profile that shows the standard of the finish and presentation.',
-    image: '/gallery/IMG_1965.JPG',
+    image: '/public/gallery/IMG_1965.JPG',
   },
   {
     title: 'Open-door presentation',
     tag: 'Interior and exterior together',
     note: 'A stronger luxury showcase shot with the cabin open and the whole car composed properly.',
-    image: '/gallery/IMG_1964.JPG',
+    image: '/public/gallery/IMG_1964.JPG',
   },
   {
     title: 'Paint contamination',
     tag: 'Before correction',
     note: 'A close-up that helps explain the slower corrective work before the final finish appears.',
-    image: '/gallery/IMG_1949.JPG',
+    image: '/public/gallery/IMG_1949.JPG',
   },
   {
     title: 'Front three-quarter finish',
     tag: 'After detail',
     note: 'Use this angle to show gloss, stance, wheel finish, and overall presence.',
-    image: '/gallery/IMG_1960.JPG',
+    image: '/public/gallery/IMG_1960.JPG',
   },
 ]
 

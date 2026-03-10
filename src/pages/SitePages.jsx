@@ -27,8 +27,8 @@ export function AboutPage() {
     <PageTransition>
       <IntroBlock
         eyebrow="About"
-        title="A proper introduction to Ajit and why he does this work."
-        text="This page keeps the focus on the person behind the detailing: patient, trusted, and more interested in giving people that wow factor than turning the work into a sales pitch."
+        title="A closer look at the care, pride, and personal approach behind AMP Detailing."
+        text="A warm, personal approach matters here because the work is built on trust, care, and giving people that real wow factor when they see the result."
       />
       <HighlightsSection />
       <AboutSection />
@@ -43,7 +43,7 @@ export function GalleryPage() {
       <IntroBlock
         eyebrow="Gallery"
         title="A visual record of the finish, the presentation, and the detail work."
-        text="The strongest images belong here, especially full-car presentation shots and close-ups that explain the work behind the final result."
+        text="A closer look at the finish, the presentation, and the care behind the work."
       />
       <GallerySection />
     </PageTransition>
@@ -54,9 +54,9 @@ export function WhatHeDoesPage() {
   return (
     <PageTransition>
       <IntroBlock
-        eyebrow="What He Does"
-        title="A clear view of the work that goes into each detail."
-        text="This page explains the areas Ajit works on and the process behind the finish, without turning the site into a hard sales menu."
+        eyebrow="Offerings"
+        title="A closer look at the care, time, and attention that go into each detail."
+        text="This section walks through the kind of work involved in each detail, so people can understand the care behind the finish without it feeling like a hard sell."
       />
       <ServicesSection />
       <QuoteSection />
@@ -69,8 +69,8 @@ export function PricesPage() {
     <PageTransition>
       <IntroBlock
         eyebrow="Prices"
-        title="A rough guide to the kind of time and care this work usually involves."
-        text="This page gives context around typical detailing ranges without changing the tone of the site into something money-led or sales-driven."
+        title="A guide to the level of care behind each service."
+        text="These guide prices help set expectations for the time, attention, and finish involved in proper detailing work."
       />
       <PricingSection />
     </PageTransition>
@@ -82,8 +82,8 @@ export function TestimonialsPage() {
     <PageTransition>
       <IntroBlock
         eyebrow="Testimonials"
-        title="The kind of feedback that makes the quality believable."
-        text="Short, honest comments matter because they show that the care people notice is not just something the site claims."
+        title="What people say after seeing the result."
+        text="Real feedback helps show the impression the work leaves."
       />
       <TestimonialsSection />
     </PageTransition>
@@ -96,7 +96,7 @@ export function ContactPage() {
       <IntroBlock
         eyebrow="Contact"
         title="A simple way to ask about Ajit’s work or get in touch."
-        text="This page is intentionally straightforward. It should feel calm, direct, and easy to use."
+        text="Getting in touch should feel straightforward, calm, and easy."
       />
       <ContactSection />
     </PageTransition>
