@@ -436,6 +436,9 @@ export function PricingSection() {
               <p className="pricing-service">{item.title}</p>
               <h3>{item.shortPrice}</h3>
               <p>{item.note}</p>
+              <p className="pricing-friends-note">
+                Special Rates For True Friends ~~~ Free <span aria-hidden="true">♥</span>
+              </p>
             </Link>
           </Motion.div>
         ))}

@@ -690,6 +690,19 @@
   color: rgba(247, 241, 232, 0.82);
 }
 
+.pricing-card-premium .pricing-friends-note {
+  margin-top: 1rem;
+  padding-top: 0.9rem;
+  border-top: 1px solid rgba(255, 244, 232, 0.16);
+  color: #fff4e8;
+  font-size: 0.92rem;
+  font-weight: 600;
+}
+
+.pricing-card-premium .pricing-friends-note span {
+  color: #ff9ab0;
+}
+
 .pricing-card-premium h3 {
   color: #fff4e8;
   font-size: 2rem;
