@@ -200,13 +200,13 @@ export function HeroSection() {
 
       <div className="hero-visual" aria-hidden="true">
         <div className="visual-card visual-primary" ref={primaryCardRef}>
-          <img src="/public/gallery/IMG_1964.JPG" alt="" className="visual-photo" />
+          <img src="/gallery/IMG_1964.JPG" alt="" className="visual-photo" />
           <span className="visual-label">Featured Presentation</span>
           <strong>Open-door Rolls-Royce finish</strong>
           <small>Interior care and exterior finish in one view.</small>
         </div>
         <div className="visual-card visual-secondary" ref={secondaryCardRef}>
-          <img src="/public/gallery/IMG_1960.JPG" alt="" className="visual-photo" />
+          <img src="/gallery/IMG_1960.JPG" alt="" className="visual-photo" />
           <span className="visual-label">Finished Result</span>
           <strong>Front three-quarter gloss</strong>
           <small>A clear view of the final finish.</small>
@@ -353,7 +353,7 @@ export function ServicesSection() {
       <div className="services-layout">
         <article className="services-card services-showcase">
           <div className="services-showcase-media">
-            <img src="/public/gallery/IMG_1965.JPG" alt="Rolls-Royce side profile after detailing" className="gallery-photo" />
+            <img src="/gallery/IMG_1965.JPG" alt="Rolls-Royce side profile after detailing" className="gallery-photo" />
           </div>
           <div className="services-showcase-copy">
             <p className="pricing-service">AMP Approach</p>
@@ -528,7 +528,7 @@ export function TestimonialsSection() {
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.45 }}
         >
-          <img src="/public/gallery/IMG_1964.JPG" alt="" className="testimonial-photo" />
+          <img src="/gallery/IMG_1964.JPG" alt="" className="testimonial-photo" />
           <div className="testimonial-overlay" />
           <div className="testimonial-content">
             <p className="pricing-service">Featured Feedback</p>
