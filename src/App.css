@@ -694,13 +694,39 @@
   margin-top: 1rem;
   padding-top: 0.9rem;
   border-top: 1px solid rgba(255, 244, 232, 0.16);
-  color: #fff4e8;
+  color: rgba(247, 241, 232, 0.82);
   font-size: 0.92rem;
   font-weight: 600;
 }
 
 .pricing-card-premium .pricing-friends-note span {
   color: #ff9ab0;
+}
+
+.pricing-card-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  margin-top: 1rem;
+  font-size: 0.84rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #21415b;
+}
+
+.pricing-card-premium .pricing-card-cta {
+  color: #ffe1b7;
+}
+
+.pricing-link:hover .pricing-card-cta,
+.pricing-link:focus-visible .pricing-card-cta {
+  color: #122234;
+}
+
+.pricing-card-premium.pricing-link:hover .pricing-card-cta,
+.pricing-card-premium.pricing-link:focus-visible .pricing-card-cta {
+  color: #fff4e8;
 }
 
 .pricing-card-premium h3 {

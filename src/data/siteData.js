@@ -75,7 +75,7 @@ export const servicesData = [
   {
     slug: 'ceramic-coating-paint-protection',
     title: 'Ceramic coating/paint protection',
-    shortPrice: '£1000+',
+    shortPrice: '£1000 +',
     summary: 'Ceramic protection sits higher because the prep matters, the finish matters, and the coating is intended to last for years.',
     note: 'Ceramic coating with long-term paint protection.',
     overview:

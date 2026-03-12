@@ -88,6 +88,9 @@ export function ServicePage({ services }) {
                 <p className="pricing-service">{item.title}</p>
                 <h3>{item.shortPrice}</h3>
                 <p>{item.summary}</p>
+                <p className="pricing-card-cta">
+                  More info <span aria-hidden="true">→</span>
+                </p>
               </Link>
             </Motion.div>
           ))}
